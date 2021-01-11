@@ -1,11 +1,5 @@
 from django.db import models
 from core import models as core_models
-"""
-Here are the models you have to create:
-- Category
-  name
-  kind (book/movie/both)
-"""
 
 
 class Category(core_models.TimeStampedModel):
@@ -20,7 +14,7 @@ class Category(core_models.TimeStampedModel):
         (KIND_BOTH, "Both"),
     )
 
-    name = models.CharField(max_length=80)
+    name = models.CharField(max_length=15)
     kind = models.CharField(
         max_length=10, choices=KIND_CHOICES, default=KIND_BOTH)
 

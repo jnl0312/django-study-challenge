@@ -7,7 +7,7 @@ Here are the models you have to create:
   year
   cover_image
   rating
-  category (ManyToMany => categories.Category)
+  category (Foreignkey => categories.Category) : manytomany에서 과제 정답은 바뀜
   director (ForeignKey => people.Person)
   cast (ManyToMany => people.Person)
 """
@@ -15,16 +15,16 @@ Here are the models you have to create:
 
 class Movie(core_models.TimeStampedModel):
     """ Movie Model Definition """
-    title = models.CharField(max_length=50)
-    year = models.DateField()
+    title = models.CharField(max_length=120)
+    year = models.IntegerField()
     cover_image = models.ImageField(blank=True)
     rating = models.IntegerField()
-    category = models.ManyToManyField(
-        "categories.Category", blank=True)
+    category = models.ForeignKey(
+        "categories.Category", on_delete=models.CASCADE, related_name="movies", null=True)
     director = models.ForeignKey(
-        "people.Person", on_delete=models.CASCADE, related_name="kind_director")
+        "people.Person", on_delete=models.CASCADE, related_name="movies")
     cast = models.ManyToManyField(
-        "people.Person", blank=True, related_name="kind_cast")
+        "people.Person", blank=True)
 
     def __str__(self):
         return self.title

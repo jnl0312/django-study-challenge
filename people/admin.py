@@ -8,11 +8,10 @@ from . import models
 class PersonAdmin(admin.ModelAdmin):
     list_display = (
         "name",
-        "photo",
+        # "photo",
         "kind",
     )
 
     list_filter = (
-        "name",
         "kind",
     )

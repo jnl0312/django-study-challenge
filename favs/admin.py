@@ -7,8 +7,8 @@ from . import models
 class FavListAdmin(admin.ModelAdmin):
     list_display = (
         "created_by",
-        "show_books",
-        "show_movies",
+        # "show_books",
+        # "show_movies",
     )
 
     list_filter = (
@@ -17,8 +17,11 @@ class FavListAdmin(admin.ModelAdmin):
         "movies",
     )
 
+
+"""
     def show_books(self, obj):
         return obj.books.all().first()
 
     def show_movies(self, obj):
         return obj.movies.all().first()
+"""

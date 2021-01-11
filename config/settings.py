@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 
-
 DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,13 +41,14 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-  "users.apps.UsersConfig",
-  "books.apps.BooksConfig",
-  "categories.apps.CategoriesConfig",
-  "favs.apps.FavsConfig",
-  "movies.apps.MoviesConfig",
-  "people.apps.PeopleConfig",
-  "reviews.apps.ReviewsConfig"
+    "core.apps.CoreConfig",
+    "users.apps.UsersConfig",
+    "books.apps.BooksConfig",
+    "categories.apps.CategoriesConfig",
+    "favs.apps.FavsConfig",
+    "movies.apps.MoviesConfig",
+    "people.apps.PeopleConfig",
+    "reviews.apps.ReviewsConfig"
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
@@ -134,7 +134,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
-
 
 
 AUTH_USER_MODEL = "users.User"

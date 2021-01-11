@@ -7,7 +7,7 @@ from . import models
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         "created_by",
-        "text",
+        #    "text",
         "movie",
         "book",
         "rating",
@@ -16,10 +16,10 @@ class ReviewAdmin(admin.ModelAdmin):
     )
 
     list_filter = (
-        "created_by",
-        "text",
+        #    "created_by",
+        #    "text",
         "movie",
         "book",
-        "rating",
+        #    "rating",
 
     )

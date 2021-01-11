@@ -9,20 +9,23 @@ class MovieAdmin(admin.ModelAdmin):
         "title",
         "year",
         "rating",
-        "cover_image",
-        "director",
-        "show_categories",
+        #    "cover_image",
+        #    "director",
+        #    "show_categories",
 
     )
 
     list_filter = (
-        "title",
+        #    "title",
         "year",
         "rating",
-        "cover_image",
-        "director",
-        "category",
+        #    "cover_image",
+        #    "director",
+        #    "category",
     )
 
+
+"""
     def show_categories(self, obj):
         return obj.category.all().first()
+"""
